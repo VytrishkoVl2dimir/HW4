@@ -1,9 +1,9 @@
 let studentsByudget = [];
 let studentsKontrakt = [];
-let id = 1;
+
 class Student{
     constructor(enrollee){
-        this.id = id++;
+        this.id = Student.id++;
         Object.assign(this, enrollee);
 
         if(this.ratingPoint < 800){
@@ -26,6 +26,8 @@ class Student{
                  studentsByudget.splice(0,1);
              }         
         } 
+
+         static id = 1
 
          static listOfStudentsByudget(){
          return(studentsByudget)
